@@ -1,0 +1,20 @@
+<%- include('partials/header') %>
+    <main>
+        <div class="container">
+            <div class="row col-lg-12 my-5">
+                <h1>Blog Posts</h1>
+                <hr/>
+                <a href="/blog/new">Create New Post</a>
+                <ul>
+                    <% posts.forEach(post=> { %>
+                        <li>
+                            <a href="/blog/<%= post.id %>">
+                                <%= post.title %>
+                            </a>
+                        </li>
+                        <% }) %>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <%- include('partials/footer') %>
